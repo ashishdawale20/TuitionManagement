@@ -1,0 +1,7 @@
+C:\Users\Samu\Documents\Visual Studio 2012\Projects\VaishnoTutorials\BusinessLogic\bin\Debug\BusinessLogic.dll
+C:\Users\Samu\Documents\Visual Studio 2012\Projects\VaishnoTutorials\BusinessLogic\bin\Debug\BusinessLogic.pdb
+C:\Users\Samu\Documents\Visual Studio 2012\Projects\VaishnoTutorials\BusinessLogic\bin\Debug\DataAccess.dll
+C:\Users\Samu\Documents\Visual Studio 2012\Projects\VaishnoTutorials\BusinessLogic\bin\Debug\DataAccess.pdb
+C:\Users\Samu\Documents\Visual Studio 2012\Projects\VaishnoTutorials\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\Samu\Documents\Visual Studio 2012\Projects\VaishnoTutorials\BusinessLogic\obj\Debug\BusinessLogic.dll
+C:\Users\Samu\Documents\Visual Studio 2012\Projects\VaishnoTutorials\BusinessLogic\obj\Debug\BusinessLogic.pdb

@@ -1,0 +1,17 @@
+﻿<Window x:Class="VaishnoTutorials.Home"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Home" Icon="C:\Users\Samu\Documents\Visual Studio 2012\Projects\VaishnoTutorials\VaishnoTutorials\Images\icon1.png" Height="300" Width="300" ResizeMode="NoResize">
+    <Grid>
+        <Image Name="image1" Stretch="UniformToFill" Source="Images/VaishnoBackground.png" Margin="0,0,0,-33"/>
+        <Label Height="28" Margin="60,0,95,0" Name="label1" VerticalAlignment="Top">VAISHNO TUTORIALS</Label>
+        <Label Height="28" Margin="104,17,25,0" Name="label2" VerticalAlignment="Top" FontSize="10">- Stop Dreaming Start Doing..</Label>
+        <Button Height="31" Margin="90,79,75,0" Name="btn_AddEnquiry" VerticalAlignment="Top" Background="#4da6ff" Click="btn_AddEnquiry_Click">Add Enquiry</Button>
+        <Button Background="#FF4DA6FF" Height="31" Margin="90,0,75,125" Name="button2" VerticalAlignment="Bottom" Click="button2_Click">View All Enquiries</Button>
+        <Button Background="#FF4DA6FF" Height="30" Margin="90,0,75,90" Name="button3" VerticalAlignment="Bottom" Click="button3_Click">Add Admission</Button>
+        <Button Background="#FF4DA6FF" Height="30" Margin="90,0,75,55" Name="button4" VerticalAlignment="Bottom" Click="button4_Click">View All Admissions</Button>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="373,91,-179,0" VerticalAlignment="Top" Width="100"/>
+        <Button Background="#FF4DA6FF" Height="30" Margin="90,0,75,20" Name="button5" VerticalAlignment="Bottom" Click="button5_Click">Money Flow</Button>
+
+    </Grid>
+</Window>

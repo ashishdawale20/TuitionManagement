@@ -1,0 +1,80 @@
+﻿<Window x:Class="VaishnoTutorials.AddAdmission"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AddAdmission" Height="408" Width="893" FontSize="14">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="285*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+        <Image Name="image1" Stretch="UniformToFill" Source="/VaishnoTutorials;component/Images/VaishnoBackground.png" Margin="0,0,0,-21" Grid.ColumnSpan="2" />
+        <Label Content="Personal Details:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="F Name:" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.628,1.621" Margin="0,29,0,0" FontSize="12"/>
+        <TextBox Name="txtFName"  HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="76,34,0,0"/>
+        <TextBlock Foreground="Red" Visibility="Hidden" FontSize="25" Name="mdFirstN" Text="*" DockPanel.Dock="Right" Margin="204,32,103,-32"/>
+        <Label Content="M Name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="247,34,0,0" FontSize="12"/>
+        <TextBox Name="txtMName" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Margin="334,34,0,0"/>
+        <Label Content="L Name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="517,32,0,0" FontSize="12"/>
+        <TextBox Name="txtLName" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="592,34,0,0"/>
+        <TextBlock Foreground="Red" Visibility="Hidden" FontSize="25" Name="mdLastN" Text="*" DockPanel.Dock="Right" Margin="717,31,-389,-31" Grid.ColumnSpan="2"/>
+        <Label Content="Phone No:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,76,0,0" FontSize="12"/>
+        <TextBox HorizontalAlignment="Left" MaxLength="10"  PreviewTextInput="txtPhoneNo_PreviewTextInput_1" Name="txtPhoneNumber" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="76,76,0,0" FocusableChanged="TextBox_FocusableChanged_1" LostFocus="TextBox_LostFocus_1"/>
+        <TextBlock Foreground="Red" Visibility="Hidden" FontSize="25" Name="mdPhoneN" Text="*" DockPanel.Dock="Right" Margin="201,77,106,-77"/>
+        <Label Content="Class:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="247,73,0,0" FontSize="12"/>
+        <ComboBox Text="-- Select --" IsEditable="True" IsReadOnly="True" SelectedValuePath="ClassName" xmlns:sys="clr-namespace:System;assembly=mscorlib" Margin="334,77,410,265" Name="ddlClass" SelectionChanged="ddlClass_SelectionChanged">
+        </ComboBox>
+        <TextBlock Foreground="Red" Visibility="Hidden" FontSize="25" Name="mdClass" Text="*" DockPanel.Dock="Right" Margin="459,83,-131,-83" Grid.ColumnSpan="2"/>
+        <Label Content="Address:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="517,74,0,0" FontSize="12"/>
+        <TextBox Name="txtAddress" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120" Margin="592,77,0,0"/>
+        <Label Content="Payment Details:" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Margin="0,123,0,0"/>
+        <Label Content="Subject:" HorizontalAlignment="Left" Margin="0,167,0,0" VerticalAlignment="Top" FontSize="12"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="34,182,0,0" VerticalAlignment="Top" Width="100"/>
+
+        <ComboBox Name="ddlSubjects"  IsEditable="True" IsReadOnly="True" Text="-- Select --"  xmlns:sys="clr-namespace:System;assembly=mscorlib" Margin="76,167,668,180">
+            <ComboBox.Resources>
+                <Style TargetType="ComboBoxItem">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ComboBoxItem">
+                                <CheckBox Content="{Binding Path=SubejectName}" CommandParameter="{Binding Path=ID}"  Checked="CheckBox_Checked" Unchecked="CheckBox_UnChecked" >
+                                </CheckBox>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ComboBox.Resources>
+            <sys:String>Math</sys:String>
+            <sys:String>Science</sys:String>
+            <sys:String>Biology</sys:String>
+            <sys:String>item 3</sys:String>
+            <sys:String>item 4</sys:String>
+        </ComboBox>
+        <TextBlock Foreground="Red" Visibility="Hidden" FontSize="25" Name="mdIstallments" Text="*" DockPanel.Dock="Right" Margin="752,168,-424,-168" Grid.ColumnSpan="2"/>
+        <Canvas>
+        <Label Content="" Canvas.Top="161" Name="lblSelectedSubjects" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="252"/>
+        <Label Content="" Canvas.Top="190" Name="lblTotal" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="252"/>
+        </Canvas>
+        <Label Content="Mode of payment:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="517,123,0,0" Foreground="White"/>
+        <Label Content="Installment:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="517,167,0,0"/>
+
+        <ComboBox Name="ddlInstallment" SelectionChanged="ddlInstallment_SelectionChanged_1"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="624,168,0,0">
+        </ComboBox>
+        <TextBlock Foreground="Red" Visibility="Hidden" FontSize="25" Name="mdSubjects" Text="*" DockPanel.Dock="Right" Margin="204,168,103,-168"/>
+        <Label Content="Selected Subject:" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="247,123,0,0"/>
+        <Label Content=""  Name="lblDueDate" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.767,1.172" Margin="517,201,0,0"/>
+        <Label Content="Get details from enquiry" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="10" Margin="68,94,0,0" Width="179" Height="29"/>
+        <Button Height="23" HorizontalAlignment="Left" Margin="24,0,0,32" Name="button1" VerticalAlignment="Bottom" Width="75" Background="#4da6ff" Click="button1_Click_1">Submit</Button>
+        <Label Height="28" HorizontalAlignment="Left" Margin="21,0,0,67" Name="txt_Success" VerticalAlignment="Bottom" Foreground="Green" Visibility="Hidden">Enquiry Added Successfully !!!</Label>
+        <Button Background="#FF4DA6FF" Height="25" HorizontalAlignment="Left"  Content="Back to home" Width="120" Margin="127,0,0,32" VerticalAlignment="Bottom"  Click="Button_Click_2"/>
+        <CheckBox Content="Pay" Name="chkFirst" Visibility="Hidden" Checked="chkFirst_Checked_1" Unchecked="chkFirst_Unchecked_1" HorizontalAlignment="Left" Margin="705,207,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.55,-0.389"/>
+        <CheckBox Content="Pay" Name="chkFourth" Visibility="Hidden" Checked="chkFirst_Checked_1" Unchecked="chkFirst_Unchecked_1" HorizontalAlignment="Left" Margin="705,261,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.55,-0.389"/>
+        <CheckBox Content="Pay" Name="chkSecond" Visibility="Hidden" Checked="chkFirst_Checked_1" Unchecked="chkFirst_Unchecked_1" HorizontalAlignment="Left" Margin="705,225,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.55,-0.389"/>
+        <CheckBox Content="Pay" Name="chkThird" Visibility="Hidden" Checked="chkFirst_Checked_1" Unchecked="chkFirst_Unchecked_1" HorizontalAlignment="Left" Margin="705,243,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.55,-0.389"/>
+        <Label Content="Label" Name="lblFirstDuePaidDate" Visibility="Hidden" HorizontalAlignment="Left" Margin="761,201,0,0" VerticalAlignment="Top" Width="100"/>
+        <Label Content="Label" Name="lblSecondDuePaidDate" Visibility="Hidden" HorizontalAlignment="Left" Margin="761,219,0,0" VerticalAlignment="Top"/>
+        <Label Content="Label" Name="lblFourthDuePaidDate" Visibility="Hidden" HorizontalAlignment="Left" Margin="761,255,0,0" VerticalAlignment="Top"/>
+        <Label Content="Label" Name="lblThirdDuePaidDate" Visibility="Hidden" HorizontalAlignment="Left" Margin="761,237,0,0" VerticalAlignment="Top"/>
+        <Button Background="#FF4DA6FF" Height="25" Margin="273,0,453,32" x:Name="button4" VerticalAlignment="Bottom" Click="button4_Click" Content="View All Admissions"/>
+        <Label Content="* Enter Mandetory Fields!" Name="lblErrorMessage" Visibility="Hidden" Foreground="Red" HorizontalAlignment="Left" Margin="19,275,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

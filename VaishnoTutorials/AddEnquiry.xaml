@@ -1,0 +1,40 @@
+﻿<Window x:Class="VaishnoTutorials.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Add Enquiry" Height="432.388" Width="829.12">
+
+    <Grid Margin="0,0,28,24">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="465*"/>
+            <ColumnDefinition Width="328*"/>
+        </Grid.ColumnDefinitions>
+        <Image Name="image1" Stretch="UniformToFill" Source="/VaishnoTutorials;component/Images/VaishnoBackground.png" Margin="0,0,-30,-21" Grid.ColumnSpan="2" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="110,50,0,0" Name="txtFName" VerticalAlignment="Top" Width="120" />
+        <TextBlock Foreground="Red" Visibility="Hidden" FontSize="25" Name="mdFirstN" Text="*" DockPanel.Dock="Right" Grid.ColumnSpan="2" Margin="246,48,82,-48"></TextBlock>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="110,100,0,0" Name="txtMName" VerticalAlignment="Top" Width="120" />
+        <TextBox HorizontalAlignment="Left" Margin="110,153,0,0" Name="txtLName" Width="120" Height="23" VerticalAlignment="Top" />
+        <Label Height="28" HorizontalAlignment="Left" Margin="19,48,0,0" Name="lblFirstName" VerticalAlignment="Top" Width="80">First Name:</Label>
+        <Label Height="28" HorizontalAlignment="Left" Margin="19,100,0,0" Name="label2" VerticalAlignment="Top" Width="85">Middle Name:</Label>
+        <Label HorizontalAlignment="Left" Margin="19,153,0,0" Name="label3" Width="80" Height="28" VerticalAlignment="Top">Last Name:</Label>
+        <TextBlock Foreground="Red" Visibility="Hidden" FontSize="25" Name="mdLastN" Text="*" DockPanel.Dock="Right" Grid.ColumnSpan="2" Margin="235,153,-235,-153" ></TextBlock>
+        <RichTextBox Height="75" HorizontalAlignment="Right" Margin="0,48,82,0" Name="txtAddress" VerticalAlignment="Top" Width="200" Grid.Column="1" />
+        <Label Margin="320,50,275,0" Name="label1" Height="28" VerticalAlignment="Top" Grid.ColumnSpan="2">Address:</Label>
+        <TextBox Height="23" HorizontalAlignment="Right" MaxLength="10" Margin="0,153,162,0" PreviewTextInput="txtPhoneNo_PreviewTextInput_1"  Name="txtPhoneNo" VerticalAlignment="Top" Width="120" Grid.Column="1" />
+        <Label Height="28" Margin="320,151,274,0" Name="label4" VerticalAlignment="Top" Grid.ColumnSpan="2">Phone No.:</Label>
+        <TextBlock Foreground="Red" Visibility="Hidden"  FontSize="25" Name="mdPhoneN" Text="*" DockPanel.Dock="Right" Grid.Column="1" Margin="171,153,-636,-153"/>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="110,0,0,151" Name="txtClass" VerticalAlignment="Bottom" Width="120" />
+        <Label Height="28" HorizontalAlignment="Left" Margin="19,0,0,148" Name="label5" VerticalAlignment="Bottom" Width="80">Class:</Label>
+        <Label Height="28" Margin="320,0,306,146" Name="label6" VerticalAlignment="Bottom" Grid.ColumnSpan="2">Subject:</Label>
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,0,162,153" Name="txtSubject" VerticalAlignment="Bottom" Width="120" Grid.Column="1" >
+        </TextBox>
+        <Label Height="28" HorizontalAlignment="Left" Margin="19,0,0,109" Name="label7" VerticalAlignment="Bottom" Width="72">Remark:</Label>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="110,0,0,109" Name="txtRemark" VerticalAlignment="Bottom" Width="120" />
+        <Button Height="23" HorizontalAlignment="Left" Margin="24,0,0,48" Name="button1" VerticalAlignment="Bottom" Width="75" Background="#4da6ff" Click="button1_Click">Submit</Button>
+        <Button Height="23" HorizontalAlignment="Left" Margin="118,0,0,48" Name="button2" VerticalAlignment="Bottom" Width="112" Background="#4da6ff" Click="button2_Click">Back to Home
+        </Button>
+        <Button Background="#FF4DA6FF" Height="23" Margin="247,0,76.657,48" x:Name="btn_ViewAllEnquiries" VerticalAlignment="Bottom" Click="btn_ViewAllEnquiries_Click" Content="View All Enquiries"/>
+        <Label Height="28" HorizontalAlignment="Left" Margin="24,0,0,76" Name="txt_Success" VerticalAlignment="Bottom" Width="240" Foreground="Green" Visibility="Hidden">Enquiry Added Successfully !!!</Label>
+        <Label Content="* Enter Mandetory Fields!" Name="lblErrorMessage" Visibility="Hidden" Foreground="Red" HorizontalAlignment="Left" Margin="19,275,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

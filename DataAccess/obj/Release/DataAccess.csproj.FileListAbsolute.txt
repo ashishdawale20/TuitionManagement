@@ -1,0 +1,5 @@
+C:\Users\Samu\Documents\Visual Studio 2012\Projects\VaishnoTutorials\DataAccess\bin\Release\DataAccess.dll
+C:\Users\Samu\Documents\Visual Studio 2012\Projects\VaishnoTutorials\DataAccess\bin\Release\DataAccess.pdb
+C:\Users\Samu\Documents\Visual Studio 2012\Projects\VaishnoTutorials\DataAccess\obj\Release\DataAccess.dll
+C:\Users\Samu\Documents\Visual Studio 2012\Projects\VaishnoTutorials\DataAccess\obj\Release\DataAccess.pdb
+C:\Users\Samu\Documents\Visual Studio 2012\Projects\VaishnoTutorials\DataAccess\obj\Release\DataAccess.csprojResolveAssemblyReference.cache
